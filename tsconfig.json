@@ -1,0 +1,41 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+
+
+  // puede tener "extends", "compilerOptions", etc.
+  // Dntro de tsconfig.app.json
+
+  // ... puede haber "extends" ...
+  "compilerOptions": {
+    // --- Asegúrate que esta línea exista y sea true ---
+    "composite": true,
+
+    // --- Asegúrate que "noEmit": true NO exista o sea false ---
+    // "noEmit": true, // <--- ¡Si existe esta línea, bórrala o ponla en false!
+
+    // ... otras opciones existentes como "target", "module", "baseUrl", "paths", etc. ...
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true
+    // ... más opciones ...
+  },
+  "include": [ /* ... tu configuración de include ... */ ],
+  "exclude": [ /* ... tu configuración de exclude ... */ ]
+
+} 
