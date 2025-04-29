@@ -1,0 +1,140 @@
+
+
+
+/* src/assets/css/main.css */
+
+/* --- Paleta de Colores Pastel Suave --- */
+:root {
+  --color-background: #FDF8F5; /* Blanco hueso muy suave */
+  --color-background-light: #F5EFEA; /* Beige claro para secciones alternas */
+  --color-text: #4E443E; /* Marrón oscuro suave para texto */
+  --color-primary: #A07C5B; /* Marrón medio suave (Latte) */
+  --color-primary-darker: #866544; /* Marrón un poco más oscuro para hover */
+  --color-secondary: #A3B899; /* Verde pastel musgo */
+  --color-accent: #D8AFA0; /* Terracota/Rosa palo suave */
+  --color-white: #FFFFFF;
+  --color-border: #ddd; /* Borde suave para inputs, etc. */
+  --color-text-light: rgba(255, 255, 255, 0.9); /* Texto claro para fondos oscuros */
+  --color-text-lighter: rgba(255, 255, 255, 0.7); /* Texto más claro (footer) */
+  --color-success: var(--color-secondary); /* Verde para mensajes de éxito */
+  --color-success-bg: rgba(163, 184, 153, 0.1); /* Fondo para mensajes de éxito */
+  --shadow-color: rgba(0, 0, 0, 0.05); /* Color base para sombras */
+}
+
+/* --- Fuentes --- */
+:root {
+  --font-primary: 'Georgia', serif; /* O una fuente serif elegante */
+  --font-secondary: 'Lato', sans-serif; /* O una fuente sans-serif limpia */
+}
+
+/* --- Estilos Globales Base --- */
+body {
+  margin: 0;
+  font-family: var(--font-secondary);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Línea decorativa bajo títulos H2 (Global) */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Evita espacios extra bajo las imágenes */
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-darker);
+}
+
+/* --- Utilidades --- */
+.bg-light {
+  background-color: var(--color-background-light);
+}
+
+.section-padding {
+   padding: 60px 0;
+}
+
+/* --- Estilos para Botones Globales --- */
+.cta-button {
+  display: inline-block; /* Permite aplicar padding/margin correctamente */
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-family: var(--font-secondary);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: var(--color-primary-darker);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0, 0.1);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+.cta-button.secondary:hover {
+     background-color: var(--color-primary);
+     color: var(--color-white);
+     transform: translateY(-2px);
+}
+
