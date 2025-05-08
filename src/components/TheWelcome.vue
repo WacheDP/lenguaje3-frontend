@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<script setup>
+=======
 <script setup lang="ts">
+>>>>>>> 95e9be4167d6fbd28b7a2fa4d79f5ebfb192de2a
 import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'
@@ -32,7 +36,11 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
     recommended IDE setup is
     <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a>
     +
+<<<<<<< HEAD
+    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
+=======
     <a href="https://github.com/vuejs/language-tools" target="_blank" rel="noopener">Vue - Official</a>. If
+>>>>>>> 95e9be4167d6fbd28b7a2fa4d79f5ebfb192de2a
     you need to test your components and web pages, check out
     <a href="https://vitest.dev/" target="_blank" rel="noopener">Vitest</a>
     and

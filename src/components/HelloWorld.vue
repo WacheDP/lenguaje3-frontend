@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+<script setup>
+defineProps({
+  msg: {
+    type: String,
+    required: true,
+  },
+})
+=======
 <script setup lang="ts">
 defineProps<{
   msg: string
 }>()
+>>>>>>> 95e9be4167d6fbd28b7a2fa4d79f5ebfb192de2a
 </script>
 
 <template>
@@ -10,7 +20,11 @@ defineProps<{
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
+<<<<<<< HEAD
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+=======
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+>>>>>>> 95e9be4167d6fbd28b7a2fa4d79f5ebfb192de2a
     </h3>
   </div>
 </template>
