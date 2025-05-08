@@ -1,47 +1,31 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script setup lang="ts">
+// 1. Importa useRoute además de RouterView
+import { RouterView, useRoute } from 'vue-router'
+import StickyHeader from '@/components/StickyHeader.vue'
+
+// 2. Obtén el objeto de la ruta actual
+const route = useRoute();
+
+// La variable 'route' ahora contiene información sobre la ruta activa,
+// como route.path, route.name, route.params, route.query, route.meta, etc.
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <StickyHeader v-if="route.name !== 'auth'" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
+  <main class="main-content">
+    <RouterView />
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+/* Estilos existentes para main-content (padding-top) */
+.main-content {
+  padding-top: 70px; /* Ajusta este valor según sea necesario */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+/* Si el header está oculto, quizás no necesites el padding-top.
+   Podrías hacerlo condicional también, pero es más complejo.
+   Por ahora, dejar el padding no molesta en la página de auth.
+   Una solución más avanzada usaría clases dinámicas o layouts distintos. */
 </style>
