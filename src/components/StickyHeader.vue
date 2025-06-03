@@ -19,13 +19,18 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <style scoped>
+body, header{
+  margin: 0;
+  padding: 0;
+}
+
 .sticky-header {
-  position: fixed; /* Fija la barra en la ventana */
+  position: absolute; /* Fija la barra en la ventana */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; /* Asegura que esté sobre otro contenido */
-  background-color: rgba(253, 248, 245, 0.95); /* Color fondo suave casi opaco */
+  background-color: rgba(23, 23, 23, 0.87); /* Color fondo suave casi opaco */
   /* Alternativa: var(--color-white) o var(--color-background-light) */
   backdrop-filter: blur(5px); /* Efecto blur si el fondo es semi-transparente */
   -webkit-backdrop-filter: blur(5px);
@@ -43,7 +48,7 @@ import { RouterLink } from 'vue-router';
   font-family: var(--font-primary);
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: rgba(248, 201, 166, 0.96);
   text-decoration: none;
 }
 .brand-link:hover {
@@ -55,7 +60,7 @@ import { RouterLink } from 'vue-router';
   display: inline-flex; /* Para alinear icono y texto */
   align-items: center;
   gap: 8px; /* Espacio entre icono y texto */
-  background-color: var(--color-secondary); /* Usamos el color secundario (verde suave) */
+  background-color: #537445; /* Usamos el color secundario (verde suave) */
   color: var(--color-white);
   border: none;
   padding: 8px 18px; /* Ligeramente más pequeño que cta-button */
@@ -71,7 +76,7 @@ import { RouterLink } from 'vue-router';
 }
 
 .auth-button:hover {
-  background-color: #8FAA83; /* Verde un poco más oscuro */
+  background-color: #92cc7a; /* Verde un poco más oscuro */
   transform: translateY(-1px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }

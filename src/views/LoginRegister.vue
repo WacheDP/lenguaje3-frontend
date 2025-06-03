@@ -49,6 +49,7 @@
 </template>
 
 <script setup lang="ts">
+import AuthForm from '@/components/AuthForm.vue'; 
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'; // Importar si necesitas redirigir después del login/registro
 
@@ -131,8 +132,9 @@ const handleRegister = () => {
 </script>
 
 <style scoped>
+
 .auth-page {
-  background-color: var(--color-background-light); /* Fondo suave */
+  background: linear-gradient(rgba(5,7,12,0.55), rgba(5,7,12,0.55)), url('../assets/pexels-apgpotr-683039.jpg') no-repeat center center; /* Fondo suave */
   min-height: 80vh; /* Asegura que ocupe buena parte de la pantalla */
   display: flex;
   align-items: center; /* Centra verticalmente el contenedor */
@@ -142,7 +144,7 @@ const handleRegister = () => {
 .auth-container {
   max-width: 450px;
   width: 100%;
-  background-color: var(--color-white);
+  background-color: rgba(222, 211, 211, 0.666);
   padding: 40px 30px;
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
@@ -155,7 +157,7 @@ const handleRegister = () => {
 .auth-container p {
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    color: #666;
+    color: #543c3c;
 }
 
 
@@ -173,7 +175,7 @@ const handleRegister = () => {
   margin-bottom: 6px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-primary);
+  color: rgb(130, 76, 49);
 }
 
 .form-group input {
@@ -201,14 +203,14 @@ const handleRegister = () => {
 .link-button {
     background: none;
     border: none;
-    color: var(--color-primary);
+    color: rgb(130, 76, 49);
     text-decoration: underline;
     cursor: pointer;
     font-size: 0.95rem;
     padding: 0;
 }
 .link-button:hover {
-    color: var(--color-primary-darker);
+    color: rgb(184, 109, 71);
 }
 
 /* Estilo para mensajes de feedback */
@@ -218,7 +220,7 @@ const handleRegister = () => {
     border-radius: 4px;
     font-weight: bold;
     font-size: 0.9rem;
-    color: var(--color-success); /* Verde por defecto */
+    color: rgb(184, 109, 71); /* Verde por defecto */
     background-color: var(--color-success-bg);
 }
 

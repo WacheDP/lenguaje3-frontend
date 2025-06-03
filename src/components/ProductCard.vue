@@ -1,6 +1,6 @@
 <template>
   <div class="product-card">
-    <img :src="product.imageUrl" :alt="product.name" class="product-image" />
+    <img src="../assets/coffee-shop-background-02x9a49rdcr5c18i.jpg" :alt="product.name" class="product-image" />
     <h3>{{ product.name }}</h3>
     <p>{{ product.description }}</p>
   </div>
@@ -19,7 +19,7 @@ defineProps({
 
 <style scoped>
 .product-card {
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.577);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 15px var(--shadow-color);
