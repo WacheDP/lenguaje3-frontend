@@ -69,6 +69,8 @@ interface ContactFormData {
 }
 import { ref } from 'vue';
 // Importar los nuevos componentes
+import NavBar from '@/components/NavBar.vue'; 
+import ProductList from '@/components/ProductList.vue';
 import HeroSection from '@/components/HeroSection.vue';
 import ProductCard from '@/components/ProductCard.vue';
 import ContactForm from '@/components/ContactForm.vue';
@@ -106,7 +108,6 @@ const verMasProductos = () => {
   alert('Aquí navegarías a la página completa de productos.');
   // Si tienes Vue Router, usarías: router.push('/productos');
 };
-
 </script>
 
 <style scoped>
@@ -143,6 +144,5 @@ const verMasProductos = () => {
     text-align: center;
     margin: 0 auto; /* Centra el contenedor del formulario */
 }
-
 
 </style>
