@@ -1,1 +1,1 @@
-que tal muchachos como tan? le inclui algo de imagen en background a esta pagina para que almenos se vea un poco mejor que la que estaba anteriormente, After 3 months of using the application, I have to say that it has been a radical change for me and y que alfin digan que pude subir algo de mis files here.
+vue.js

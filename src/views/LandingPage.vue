@@ -57,6 +57,26 @@
       </div>
     </section>
 
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <AppFooter />
   </div>
 </template>
@@ -143,6 +163,33 @@ const verMasProductos = () => {
     max-width: 700px;
     text-align: center;
     margin: 0 auto; /* Centra el contenedor del formulario */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos verticalmente */
+  gap: 10px; /* Espacio uniforme entre los botones */
+  list-style: none; /* Elimina los estilos de lista */
+  padding: 0;
+}
+
+.page-item {
+  display: inline-block;
+}
+
+.page-link {
+  padding: 8px 12px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  transition: 0.3s;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
 }
 
 </style>

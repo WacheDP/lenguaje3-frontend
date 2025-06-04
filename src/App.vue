@@ -16,6 +16,7 @@ const route = useRoute();
   <main class="main-content">
     <RouterView />
   </main>
+
 </template>
 
 <style scoped>

@@ -5,6 +5,18 @@
         <RouterLink to="/" class="brand-link">Café Don Belén</RouterLink>
       </div>
       <nav class="header-nav">
+        <RouterLink to="/" class="brand-page">
+          <i class="fas fa-user"></i> <b>Inicio</b>
+        </RouterLink>
+        <RouterLink to="/" class="brand-page">
+          <i class="fas fa-user"></i> <b>Productos</b>
+        </RouterLink>
+        <RouterLink to="/" class="brand-page">
+          <i class="fas fa-user"></i> <b>Contacto</b>
+        </RouterLink>
+        <RouterLink to="contacto" class="brand-page">
+          <i class="fas fa-user"></i> <b>Sobre Nosotros</b>
+        </RouterLink>            
         <RouterLink to="/auth" class="auth-button">
           <i class="fas fa-user"></i> <span>Acceder / Registrarse</span>
         </RouterLink>
@@ -22,6 +34,11 @@ import { RouterLink } from 'vue-router';
 body, header{
   margin: 0;
   padding: 0;
+}
+
+*{
+  left: auto;
+  box-sizing: border-box; /* Asegura que el padding y border no afecten al tamaño total */
 }
 
 .sticky-header {
@@ -42,6 +59,17 @@ body, header{
   display: flex;
   justify-content: space-between; /* Espacia el logo/nombre y el botón */
   align-items: center;
+  padding: 4px;
+}
+
+.brand-page {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(248, 201, 166, 0.96); 
+  align-items: center; /* Asegura que todos los elementos se alineen en la misma línea */
+  justify-content: space-between; /* Distribuye los elementos equitativamente */
+  padding: 6px;
 }
 
 .brand-link {

@@ -8,6 +8,14 @@
         :product="product" 
       />
     </div>
+    <!-- Paginación -->
+    <v-pagination
+      v-model="currentPage"
+      :pages="totalPages"
+      :range-size="1"
+      @update="onPageChange"
+    />
+  </div>
   </section>
 </template>
 
